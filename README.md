@@ -60,7 +60,7 @@
 + 그리고 data type 이 string형이기 때문에 마찬가지로 int값으로 mapping을 시켜주고 train과 test에서 모두알맞은 값으로 mapping 시켜줌
 <br>
 <br>
-
+<br>
 * * *
 ### Model 
 
