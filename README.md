@@ -1,9 +1,9 @@
 ![타이타닉](https://user-images.githubusercontent.com/53407163/93175293-5b628a00-f76a-11ea-8d6a-e1afd3779023.JPG)
 * * *
-### Contest Outline
+## Contest Outline
 
 * * *
-### Data
+## Data
  + survival	Survival	0 = No, 1 = Yes
 + pclass	Ticket class	1 = 1st, 2 = 2nd, 3 = 3rd
 + sex	Sex	
@@ -13,10 +13,10 @@
 + ticket	Ticket number	
 + fare	Passenger fare	
 + cabin	Cabin number	
-+ embarked	Port of Embarkation
++ embarked	Port of Embarkation<br><br><br>
   
 * * *
-### Data Preprocessing
+## Data Preprocessing
 1. PassengerID
  + PassengerId Feature 같은 경우 DataFrame에서 Index와 같은 역할을 하기 때문에 학습에 영향을 주지 않으므로 Train과 Test에서 Drop 시킴<br>
 2. Cabin
@@ -50,7 +50,7 @@
 + Mlle, Ms, Mme는 각각 Miss와 Mrs의 프랑스식 표현이므로 같이 묶어 주고 나머지는 Rare로 묶어주었음.
 + 그리고 data type 이 string형이기 때문에 마찬가지로 int값으로 mapping을 시켜주고 train과 test에서 모두알맞은 값으로 mapping 시켜줌<br><br><br>
 * * *
-### Model 
+## Model 
 
 * * *
-### Results
+## Results
