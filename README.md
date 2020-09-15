@@ -26,9 +26,7 @@
 3. Ticket
    + Ticket 같은 경우 위에서 DataFrame의 정보에서 봤듯이 object, 즉 string 형으로 이루어져 있음. 이 string데이터를 학습하기 위해서는 int value 형으로 바꿔줘야 하지만 데이터 표에서 볼 수 있듯이 숫자와 알파벳이 섞여 있으므로 어떠한 num 값으로 mapping하기가 힘드므로 이 Feature 또한 DataFrame에서 Drop 시킴<br><br>
 4. PClass
-   + Pclass는 이미 int value type이고 null 값 또한 존재하지 않으므로 Survived feature와의 관계성을 찾아보기 위해 countplot을 이용해서 관계성을 찾아봄. 아래에서 볼 수 있듯이 좌석등급이 좋지 않은 3rd class에 사람이 많이 탑승하였고 좌석등급이 좋은 좌석일수록 생존율이 높은 것을 알 수 있음<br><br>
-   ![2](https://user-images.githubusercontent.com/53407163/93191656-bf437d80-f77f-11ea-8df6-46f71c121570.JPG)<br><br>
-
+   + Pclass는 이미 int value type이고 null 값 또한 존재하지 않으므로 Survived feature와의 관계성을 찾아보기 위해 countplot을 이용해서 관계성을 찾아봄. 코드에서 볼 수 있듯이 좌석등급이 좋지 않은 3rd class에 사람이 많이 탑승하였고 좌석등급이 좋은 좌석일수록 생존율이 높은 것을 알 수 있음<br><br>
 5. Sex
    + 성별은 Null 값이 존재하지 않지만 object형이므로 int형으로 mapping 시켜줘야 함. 남자를 1값으로 여자를 0값으로 mapping 시켜주고 train과 test모두에서 object값에 맞게 알맞은 int값으로 mapping 시켜줌<br><br>
 6. Embarked
@@ -47,12 +45,11 @@
 9. Age
    + Age에는 NULL 값이 많아 처음에는 성별에 따른 나이의 median값으로만 채워주려고 했지만 두 성별의 median값이 같아 모델이 학습하는데에 도움이 되지 않을 것으로 생각되어 Pclass feature를 추가하여 두개의 feature 값에 따른 median값으로 나이를 계산하였음.
    + 그 후 null값들을 Pclass와 성별에 맞게 계산해둔 median값들로 채워넣어주었음
-   + 그 후 Fare와 마찬가지로 age또한 연속적인 값이기 때문에 연속적이지 않게만들어주기 위해 범위를 8개로 나누어 주었음
-   + 나눈 범위에 따라 특정값에 mapping을 해주었음.<br><br>
+   + 그 후 Fare와 마찬가지로 age또한 연속적인 값이기 때문에 연속적이지 않게만들어주기 위해 범위를 8개로 나누어 주고, 나눈 범위에 따라 특정값에 mapping을 해주었음.<br><br>
 10. Name
     + 외국 이름에서 공통적으로 들어가는 영어 호칭들에 따라 value값들을 count 해서 표로 표현해줌
     + Mlle, Ms, Mme는 각각 Miss와 Mrs의 프랑스식 표현이므로 같이 묶어 주고 나머지는 Rare로 묶어주었음.
-    + 그리고 data type 이 string형이기 때문에 마찬가지로 int값으로 mapping을 시켜주고 train과 test에서 모두알맞은 값으로 mapping 시켜줌<br><br>
+    + 그리고 data type 이 string형이기 때문에 마찬가지로 int값으로 mapping을 시켜주고 train과 test에서 모두 알맞은 값으로 mapping 시켜줌<br><br>
 
 
 * * *
