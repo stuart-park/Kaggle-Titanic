@@ -48,7 +48,9 @@
 10. Name
    + 외국 이름에서 공통적으로 들어가는 영어 호칭들에 따라 value값들을 count 해서 표로 표현해줌
    + Mlle, Ms, Mme는 각각 Miss와 Mrs의 프랑스식 표현이므로 같이 묶어 주고 나머지는 Rare로 묶어주었음.
-   + 그리고 data type 이 string형이기 때문에 마찬가지로 int값으로 mapping을 시켜주고 train과 test에서 모두알맞은 값으로 mapping 시켜줌<br><br><br>
+   + 그리고 data type 이 string형이기 때문에 마찬가지로 int값으로 mapping을 시켜주고 train과 test에서 모두알맞은 값으로 mapping 시켜줌<br>
+   
+<br>
 * * *
 ## Model & Results
 + 총 7가지의 모델을 이용하여 생존자를 예측하고 각 모델의 점수는 다음과 같음
