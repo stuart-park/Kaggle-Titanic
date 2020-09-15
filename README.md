@@ -18,11 +18,9 @@
 * * *
 ### Data Preprocessing
 1. PassengerID
- + PassengerId Feature 같은 경우 DataFrame에서 Index와 같은 역할을 하기 때문에 학습에 영향을 주지 않으므로 Train과 Test에서 Drop 시킴
- <br>
+ + PassengerId Feature 같은 경우 DataFrame에서 Index와 같은 역할을 하기 때문에 학습에 영향을 주지 않으므로 Train과 Test에서 Drop 시킴<br>
 2. Cabin
- + Cabin 같은 경우 아까 위에서 나왔듯이 NULL 값이 너무 많아 Survived와의 관계성을 찾기가 힘들고,NULL값을 채워넣기 힘드므로, Cabin 값 또한 Train과 Test에서 Drop 시킴
- <br>
+ + Cabin 같은 경우 아까 위에서 나왔듯이 NULL 값이 너무 많아 Survived와의 관계성을 찾기가 힘들고,NULL값을 채워넣기 힘드므로, Cabin 값 또한 Train과 Test에서 Drop 시킴<br>
 3. Ticket
  + Ticket 같은 경우 위에서 DataFrame의 정보에서 봤듯이 object, 즉 string 형으로 이루어져 있음. 이 string데이터를 학습하기 위해서는 int value 형으로 바꿔줘야 하지만 데이터 표에서 볼 수 있듯이 숫자와 알파벳이 섞여 있으므로 어떠한 num 값으로 mapping하기가 힘드므로 이 Feature 또한 DataFrame에서 Drop 시킴
  <br>
