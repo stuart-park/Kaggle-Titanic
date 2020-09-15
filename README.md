@@ -4,16 +4,18 @@
 
 * * *
 ## Data Description
- + survival	Survival	0 = No, 1 = Yes
-+ pclass	Ticket class	1 = 1st, 2 = 2nd, 3 = 3rd
-+ sex	Sex	
-+ Age	Age in years	
-+ sibsp	# of siblings / spouses aboard the Titanic	
-+ parch	# of parents / children aboard the Titanic	
-+ ticket	Ticket number	
-+ fare	Passenger fare	
-+ cabin	Cabin number	
-+ embarked	Port of Embarkation<br><br><br>
++ passengerID : 탑승객 식별번호
++ name: 이름
++ pclass	: 티켓 class (1 = 1st, 2 = 2nd, 3 = 3rd)
++ sex	: 성별
++ age	: 나이	
++ sibsp:	배우자나 형제 자매 명 수의 총 합	
++ parch:	부모 자식 명 수의 총 합
++ ticket: 티켓번호
++ fare: 티켓 가격	
++ cabin:	Cabin number	
++ embarked:	탑승항구
++ survival: 생존 여부 (0 = No, 1 = Yes)<br><br><br>
   
 * * *
 ## Data Preprocessing
