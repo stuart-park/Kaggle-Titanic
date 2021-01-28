@@ -37,7 +37,7 @@
     + Mlle, Ms, Mme는 각각 Miss와 Mrs의 프랑스식 표현이므로 같이 묶어 주고 나머지는 Rare로 묶어주었음.
     + string형이기 때문에 마찬가지로 int값으로 mapping을 시켜주고 train과 test에서 모두 알맞은 값으로 mapping 시켜줌.
 + **Model & Results**
-  + 총 7가지의 모델을 이용하여 생존자를 예측하고 각 모델의 점수는 다음과 같음
+  + 총 7가지 Model을 이용하여 생존자를 예측하였고, 각 Model의 LB Score는 다음과 같음
     + LogisticRegression  ➝  0.77033
     + Support Vector Machine ➝ 0.78468
     + KNN ➝ 0.77990
