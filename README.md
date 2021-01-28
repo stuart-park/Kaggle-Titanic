@@ -1,8 +1,10 @@
 # Kaggle Competition
 ## Overview
-**Competition :** Titanic
+**Competition :** Titanic-Machine Learning from Disaster
 
 **Objective :** Use machine learning to create a model that predicts which passengers survived the Titanic shipwreck
+
+**Evaluation :** Accuracy
 ## Description
 + **EDA & Data Preprocessing**
   + PassengerID
