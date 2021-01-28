@@ -10,7 +10,7 @@
   + PassengerID
      + 학습에 영향을 주지 않는 Feature이므로 Train과 Test Data에서 Drop.
   + Cabin
-    + NULL 값이 많아 Survived와의 관계성을 찾거나, NULL 값이 아닌 데이터를 이용하여 NULL 값을 채워넣기 어려우므로 Cabin Feature도 Train과 Test에서 Drop.
+    + NULL 값이 많아 Survived와의 관계성을 찾거나, NULL 값이 아닌 데이터를 이용하여 NULL 값을 채워넣기 어려우므로 Train과 Test에서 Drop.
   + Ticket
     + 학습을 위해 string 타입의 Ticket Feature를 int 타입으로 mapping을 해야 하지만, 숫자와 알파벳이 섞여있어 mapping 하기가 어려우므로 Train과 Test에서 Drop.
   + PClass
