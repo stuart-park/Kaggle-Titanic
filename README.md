@@ -4,20 +4,6 @@
 
 **Objective :** Use machine learning to create a model that predicts which passengers survived the Titanic shipwreck
 ## Description
-+ **EDA(Exploratory Data Analysis)**
-  + passengerID : 탑승객 식별번호
-  + name: 이름 
-  + pclass	: 티켓 class (1 = 1st, 2 = 2nd, 3 = 3rd)
-  + sex	: 성별
-  + age	: 나이	
-  + sibsp:	배우자나 형제 자매 명 수의 총 합	
-  + parch:	부모 자식 명 수의 총 합
-  + ticket: 티켓번호
-  + fare: 티켓 가격	
-  + cabin:	Cabin number	
-  + embarked:	탑승항구
-  + survival: 생존 여부 (0 = No, 1 = Yes)
-  
 + **Data Preprocessing**
   + PassengerID
      + PassengerId Feature 같은 경우 DataFrame에서 Index와 같은 역할을 하기 때문에 학습에 영향을 주지 않으므로 Train과 Test에서 Drop 시킴
