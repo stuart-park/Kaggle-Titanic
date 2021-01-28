@@ -4,19 +4,21 @@
 
 **Objective :** Use machine learning to create a model that predicts which passengers survived the Titanic shipwreck
 ## Description
-+ **Data Preprocessing**
++ **EDA(Exploratory Data Anaylsis) & Data Preprocessing**
   + PassengerID
-     + PassengerId Feature 같은 경우 DataFrame에서 Index와 같은 역할을 하기 때문에 학습에 영향을 주지 않으므로 Train과 Test에서 Drop 시킴
+     + 학습에 영향을 주지 않는 Feature이므로 Train과 Test Data에서 Drop.
   + Cabin
-    + 위에서 나왔듯이 NULL 값이 너무 많아 Survived와의 관계성을 찾기가 힘들고,NULL값을 채워넣기 힘드므로, Cabin 값 또한 Train과 Test에서 Drop 시킴
+    + NULL 값이 많아 Survived와의 관계성을 찾거나, NULL 값이 아닌 데이터를 이용하여 NULL 값을 채워넣기 어려우므로 Cabin Feature도 Train과 Test에서 Drop.
   + Ticket
-    + Ticket 같은 경우 위에서 DataFrame의 정보에서 봤듯이 object, 즉 string 형으로 이루어져 있음. 이 string데이터를 학습하기 위해서는 int value 형으로 바꿔줘야 하지만 데이터 표에서 볼 수 있듯이 숫자와 알파벳이 섞여 있으므로 어떠한 num 값으로 mapping하기가 힘드므로 이 Feature 또한 DataFrame에서 Drop 시킴
+    + 학습을 위해 string 타입의 Ticket Feature를 int 타입으로 mapping을 해야 하지만, 숫자와 알파벳이 섞여있어 mapping 하기가 어려우므로 Train과 Test에서 Drop.
   + PClass
-    + Pclass는 이미 int value type이고 null 값 또한 존재하지 않으므로 Survived feature와의 관계성을 찾아보기 위해 countplot을 이용해서 관계성을 찾아봄. 코드에서 볼 수 있듯이 좌석등급이 좋지 않은 3rd class에 사람이 많이 탑승하였고 좌석등급이 좋은 좌석일수록 생존율이 높은 것을 알 수 있음
+    +  Survived Feature와 관계성 분석을 위해 countplot을 이용. 분석 결과 좌석등급이 낮은 3rd Class에 사람이 많이 탑승하였고 좌석등급이 높은 좌석일수록 생존율이 높은 것을 알 수 있음.
   + Sex  
-    + 성별은 Null 값이 존재하지 않지만 object형이므로 int형으로 mapping 시켜줘야 함. 남자를 1값으로 여자를 0값으로 mapping 시켜주고 train과 test모두에서 object값에 맞게 알맞은 int값으로 mapping 시켜줌
+    + Null 값이 존재하지 않지만 학습을 위해 남자를 1로 여자를 0으로 mapping.
   + Embarked
-    + Embarked은 배 탑승 장소를 나타내는 feature로써 이 feature 또한 countplot을 이용해서 Survived과의 관계성을 찾아봄. S에서 탑승한 승객이 많았고 C에서 탑승한 승객들의 생존율이 높았음을 알 수 있음. 데이터 불러오는 과정에서 embarked에 2개의 NULL값이 존재함을 알 수 있었고 이 값을 단순히 승객들이많이 탑승한 S 값으로 채워넣어줌. 그 후 성별과 마찬가지로 S, C, P 값을 int 값으로 mapping 해준 다음, dataframe에서 object값에 맞게 알맞은 int값으로 mapping 시켜줌
+    + Survived Feature와의 관계를 분석한 결과, S에서 탑승한 승객이 많았고 C에서 탑승한 승객들의 생존율이 높았음을 알 수 있음. 
+    + 본 Feature에서는 2개의 NULL값이 존재하여, 승객들이 많이 탑승한 S 값으로 채워줌.
+    + Sex Feature와 마찬가지로 학습을 위해 string을 int형으로 mapping 시켜줌.
   + Fare
     + Test dataframe에서 Fare feature에서 1개의 NULL값이 존재하므로 단순히 median값으로 채워주었음. 그 후 fare band는 연속적인 숫자 값이기 때문에 범위를 정해주어 연속적이지 않게 바꿔주기 위해 5개의 범위로 나누어 주었음. 
     + Fare가 작은 값이 매우 많이 때문에 cut을 그대로 사용하게 되면 특정 범위 안에 너무 많은 값이 존재할 수 있으므로 qcut을 이용하여 백분위를 기준으로 나누어줌 그 후 범위마다 특정 숫자로 mapping을 하여 train과 test데이터 모두 Fare feature를 연속적이지 않게 바꿔준 다음 data type을 int형으로 casting 해줌.
