@@ -1,6 +1,7 @@
 # Kaggle Competition
 ## Overview
 **Competition :** Titanic
+
 **Objective :** Use machine learning to create a model that predicts which passengers survived the Titanic shipwreck
 ## Description
 + **EDA(Exploratory Data Analysis)**
@@ -15,7 +16,8 @@
   + fare: 티켓 가격	
   + cabin:	Cabin number	
   + embarked:	탑승항구
-  + survival: 생존 여부 (0 = No, 1 = Yes)<br>
+  + survival: 생존 여부 (0 = No, 1 = Yes)
+  
 + **Data Preprocessing**
   + PassengerID
      + PassengerId Feature 같은 경우 DataFrame에서 Index와 같은 역할을 하기 때문에 학습에 영향을 주지 않으므로 Train과 Test에서 Drop 시킴
