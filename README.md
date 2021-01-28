@@ -1,8 +1,6 @@
-![타이타닉](https://user-images.githubusercontent.com/53407163/93175293-5b628a00-f76a-11ea-8d6a-e1afd3779023.JPG)
-* * *
-## Contest Overview
-#### Use machine learning to create a model that predicts which passengers survived the Titanic shipwreck! <br><br>
-* * *
+# Kaggle Competition
+## Overview
+Use machine learning to create a model that predicts which passengers survived the Titanic shipwreck!
 ## Data Description
 + passengerID : 탑승객 식별번호
 + name: 이름
