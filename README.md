@@ -4,7 +4,7 @@
 
 **Objective :** Use machine learning to create a model that predicts which passengers survived the Titanic shipwreck
 ## Description
-+ **EDA(Exploratory Data Anaylsis) & Data Preprocessing**
++ **EDA & Data Preprocessing**
   + PassengerID
      + 학습에 영향을 주지 않는 Feature이므로 Train과 Test Data에서 Drop.
   + Cabin
