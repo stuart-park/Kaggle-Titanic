@@ -5,7 +5,7 @@
 + Evaluation : Accuracy
 
 ## Results
-  + 총 7가지 Model을 이용하여 생존자를 예측하였고, 각 Model의 LB Score는 다음과 같음
+  + 총 7가지 Model을 이용하여 생존자를 예측하였고, 각 Model의 LB Score는 다음과 같음.
     + LogisticRegression  ➝  0.77033
     + Support Vector Machine ➝ 0.78468
     + KNN ➝ 0.77990
