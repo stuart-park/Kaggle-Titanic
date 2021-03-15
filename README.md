@@ -3,7 +3,7 @@
 + **Objective** : Use machine learning to create a model that predicts which passengers survived the Titanic shipwreck
 
 # Results
-  + 총 7가지 Model을 이용하여 생존자를 예측하였고, 각 Model의 LB Score는 다음과 같음.
+  + LB Score for each model
 
   | Models | Score |
   | ------------- | ------------- |
